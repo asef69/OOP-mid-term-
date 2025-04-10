@@ -84,7 +84,7 @@ def menu():
                 name = input("Enter student name: ").strip()
                 department = input("Enter department: ").strip()
                 
-                # Create and add new student (automatically enrolled)
+                
                 Student(student_id, name, department)
                 print(f"\nSuccessfully enrolled {name} ({student_id}) in {department}")
             
@@ -95,12 +95,12 @@ def menu():
             print("\nDrop Student")
             student_id = input("Enter student ID to drop: ").strip()
             if StudentDataBase.remove_student(student_id):
-                print(f"Student {student_id} has been dropped from the system")
+                print(f"Student {student_id} has been dropped from the School")
             else:
                 print(f"Error: Student with ID {student_id} not found")
         
         elif choice == "4":
-            print("Exiting the system. Goodbye!")
+            print("Exiting the system.")
             break
         
         else:
